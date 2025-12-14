@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SDSS Galaxy Classification</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>SDSS Galaxy Morphology Prediction</h1>
+    <form action="/predict" method="POST">
+
+        {% for feature in feature_names %}
+            <label>{{ feature }}</label>
+            <input type="text" name="{{ feature }}" required>
+        {% endfor %}
+
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+</body>
+</html>
